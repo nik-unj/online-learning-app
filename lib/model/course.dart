@@ -33,6 +33,18 @@ List<Course> courseList = [
     skill: 'Beginner',
   ),
   Course(
+    name: "Java Advanced Programming",
+    info:
+        "Acquire Key Java Skills: From Basics to Advanced Programming & Certification - Start Your Dev Career",
+    about:
+        "Step into the world of programming with our Java Programming Masterclass, meticulously updated for 2023. Since its inception in 2016, this course has evolved continuously, ensuring you receive the latest and most relevant Java education. Purchase once and gain access to a lifetime of updates without any additional cost",
+    domain: 'Desktop',
+    certificate: true,
+    noOfClass: 90,
+    hours: 100,
+    skill: 'Advance',
+  ),
+  Course(
     name: "Flutter",
     info:
         "A Complete Guide to the Flutter SDK &amp; Flutter Framework for building native iOS and Android apps",

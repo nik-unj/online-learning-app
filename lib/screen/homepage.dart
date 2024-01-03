@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:training/model/course.dart';
+import 'package:training/screen/profilepage.dart';
 import 'package:training/style/customStyle.dart';
 import 'package:training/widget/coursetile.dart';
 import 'package:training/widget/domaintile.dart';
@@ -17,6 +18,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: const Drawer(
+        child: Text("Hello"),
+      ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -36,7 +40,12 @@ class _HomePageState extends State<HomePage> {
                     padding:
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 0),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ProfilePage()));
+                      },
                       icon: const Icon(
                         Icons.person_4_outlined,
                         size: 40,
@@ -109,9 +118,9 @@ class _HomePageState extends State<HomePage> {
           if (selectedDomain == 'All') {
             return CourseTile(course: courseList[index], index: index);
           } else {
-            if(courseList[index].domain == selectedDomain){
+            if (courseList[index].domain == selectedDomain) {
               return CourseTile(course: courseList[index], index: index);
-            }else{
+            } else {
               return Container();
             }
           }
