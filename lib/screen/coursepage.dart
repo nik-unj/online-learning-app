@@ -213,7 +213,7 @@ class CoursePage extends StatelessWidget {
                         Text(
                           course.about,
                           style: textBlack(size: 16),
-                          maxLines: 8,
+                          maxLines: 100,
                           overflow: TextOverflow.ellipsis,
                         ),
                       ],
