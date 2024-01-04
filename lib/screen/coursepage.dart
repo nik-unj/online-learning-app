@@ -98,7 +98,7 @@ class CoursePage extends StatelessWidget {
                                   style: headingBlack(size: 18),
                                 ),
                                 Text(
-                                  "50 %",
+                                  "${course.progression} %",
                                   style: textBlack(size: 20),
                                 ),
                               ],
@@ -109,7 +109,7 @@ class CoursePage extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(vertical: 10.0),
                           child: LinearPercentIndicator(
                             lineHeight: 5.0,
-                            percent: 0.5,
+                            percent: course.progression / 100,
                             backgroundColor: Colors.grey,
                             progressColor: Colors.black,
                           ),

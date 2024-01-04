@@ -5,6 +5,7 @@ class Course {
   String domain;
   int noOfClass;
   int hours;
+  int progression;
   String skill;
   bool certificate;
   Course({
@@ -16,6 +17,7 @@ class Course {
     required this.hours,
     required this.skill,
     required this.certificate,
+    required this.progression,
   });
 }
 
@@ -31,6 +33,7 @@ List<Course> courseList = [
     noOfClass: 136,
     hours: 100,
     skill: 'Beginner',
+    progression: 10,
   ),
   Course(
     name: "Java Advanced Programming",
@@ -43,6 +46,7 @@ List<Course> courseList = [
     noOfClass: 90,
     hours: 100,
     skill: 'Advance',
+    progression: 0,
   ),
   Course(
     name: "Flutter",
@@ -55,6 +59,7 @@ List<Course> courseList = [
     noOfClass: 20,
     hours: 8,
     skill: 'Beginner',
+    progression: 0,
   ),
   Course(
     name: "Figma",
@@ -67,6 +72,7 @@ List<Course> courseList = [
     noOfClass: 15,
     hours: 3,
     skill: 'Beginner',
+    progression: 30,
   ),
   Course(
     name: "Linux",
@@ -79,6 +85,7 @@ List<Course> courseList = [
     noOfClass: 10,
     hours: 2,
     skill: 'Beginner',
+    progression: 70,
   ),
   Course(
     name: "React",
@@ -91,5 +98,6 @@ List<Course> courseList = [
     noOfClass: 56,
     hours: 20,
     skill: 'Beginner',
+    progression: 0,
   ),
 ];

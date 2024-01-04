@@ -22,68 +22,68 @@ class _HomePageState extends State<HomePage> {
         child: Text("Hello"),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "ML",
-                    style: headingBlack(size: 40),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 0),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ProfilePage()));
-                      },
-                      icon: const Icon(
-                        Icons.person_4_outlined,
-                        size: 40,
-                      ),
-                      color: Colors.black,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "ML",
+                      style: headingBlack(size: 40),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 8, horizontal: 0),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ProfilePage()));
+                        },
+                        icon: const Icon(
+                          Icons.person_4_outlined,
+                          size: 40,
+                        ),
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0),
-              child: Text(
-                "${courseList.length}",
-                style: headingBlack(size: 70),
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0),
+                child: Text(
+                  "${courseList.length}",
+                  style: headingBlack(size: 70),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0),
-              child: Text(
-                "Available directions",
-                style: textBlack(size: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0),
+                child: Text(
+                  "Available directions",
+                  style: textBlack(size: 20),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 25),
-              child: SizedBox(
-                height: 60,
-                child: domainList(),
+              Padding(
+                padding: const EdgeInsets.only(top: 25),
+                child: SizedBox(
+                  height: 60,
+                  child: domainList(),
+                ),
               ),
-            ),
-            Expanded(
-              child: Padding(
+              Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: coursesList(),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -112,6 +112,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget coursesList() {
     return ListView.builder(
+        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemCount: courseList.length,
         itemBuilder: (context, index) {

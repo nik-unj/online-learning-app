@@ -81,7 +81,7 @@ class CourseTile extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 5.0),
                 child: LinearPercentIndicator(
                   lineHeight: 5.0,
-                  percent: 0.5,
+                  percent: course.progression / 100,
                   backgroundColor: Colors.grey,
                   progressColor: Colors.black,
                 ),
