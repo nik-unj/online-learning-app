@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    precacheImage(AssetImage('assets/images/2336.jpg'), context);
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
@@ -35,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => const LandingPage()));
     });
@@ -49,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/2336.jpg',
+            'assets/images/train.gif',
             filterQuality: FilterQuality.low,
           ),
           Column(

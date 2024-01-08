@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget coursesList() {
     return ListView.builder(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemCount: courseList.length,
         itemBuilder: (context, index) {
